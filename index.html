@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,700;1,500&amp;family=Quicksand:wght@700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="top-nav">
+        <div class="logo">
+            <a href="index.html">
+            Samuel Michelet</a>
+        </div>
+        <div class="right-nav">
+            <ul>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header id="header-home">
+        <section id="hero">
+            <div class="hero-text">
+                <h1>Conception et réalisation de projet web et mobile innovant</h1>
+                <h2>Je pilote vos projets web et mobile pour les transformer en expériences agréables et enrichissantes. Mon objectif est d’atteindre vos objectifs.</h2>
+                <a href="index.html#contact" class="cta">
+            Contactez-moi
+        </a>
+            </div>
+    </section>
+    <div class="header__seenon-text">Expertise</div>
+    <section class="hero-techno">
+        <div class="expertise"><img src="img/google.png" alt=""></div>
+        <div class="expertise"><img src="img/html.png" alt=""></div>
+        <div class="expertise"><img src="img/fb.png" alt=""></div>
+        <div class="expertise"><img src="img/wordpress.png" alt=""></div>
+                
+    </section>
+    </header>
+    <main>
+        <section id="storytelling">
+            <h2 class="title2">Pourquoi travailler avec moi?</h2>
+            <ul class="stories">
+                <li class="story">
+                    <div class="story-img story1"></div>
+                    <h3 class="title3">Analyse de votre besoin</h3>
+                    <p class="story-txt">Vous avez un projet et savez où vous voulez aller mais vous n'arrivez pas à
+                        cerner votre besoin réel ? Je vous propose une analyse pertinente de votre besoin.</p>
+                    
+                </li>
+                <li class="story">
+                    <div class="story-img story2"></div>
+                    <h3 class="title3">Opitimisation du budget</h3>
+                    <p class="story-txt">Pourquoi dépenser votre argent dans des solutions complexes et couteuses à
+                        produire et à maintenir ? Payer pour ce dont vous avez besoin sans sacrifier la qualité de votre
+                        produit.</p>
+                    
+                </li>
+                <li class="story">
+                    <div class="story-img story3"></div>
+                    <h3 class="title3">Service de qualité</h3>
+                    <p class="story-txt">Je propose des services uniquement dans les domaines que je maîtrise, vous ne
+                        payez pas pour me former mais pour une prestation de service de qualité ! </p>
+                    
+                </li>
+                <li class="story">
+                    <div class="story-img story4"></div>
+                    <h3 class="title3">Pilotage de votre projet</h3>
+                    <p class="story-txt">Vision à court, moyen et long terme de vos objectifs. L'évolution de votre
+                        projet est pris en compte en continue. </p><br>
+                    
+                </li>
+                <li class="story">
+                    <div class="story-img story5"></div>
+                    <h3 class="title3">Simplicité et efficacité</h3>
+                    <p class="story-txt">Je n'aime pas les noeux de cerveau inutiles et vous ? Il m'a fallu un certain
+                        temps mais j'ai compris que pour être efficace il faut rechercher la simplicité.</p>
+                </li>
+                <li class="story">
+                    <div class="story-img story6"></div>
+                    <h3 class="title3">Vers l'infini et au delà !</h3>
+                    <p class="story-txt">Vous souhaitez vous arrêter une fois vos objectifs atteints ? Il y a peut-être
+                        d'autres horizons à explorer, parlons-en..</p><br>
+                </li>
+
+            </ul>
+            
+                <a href="#contact" class="cta">Contactez-moi</a>
+            
+        </section>
+        <section id="twopath">
+            <div class="corporate">
+                <p>Vous êtes une marque</p>
+                <h2>et vous voulez sous-traiter la gestion de votre projet digital</h2>
+                <a href="#modal-corporate" class="cta">
+                    Lisez ceci
+                </a>
+            </div>
+            <div class="startup">
+                <p>Vous êtes une startup</p>
+                <h2>à la recherche d'un chef de projet junior?</h2>
+
+                <a class="cta">
+                    Lisez ceci
+                </a>
+            </div>
+        </section>
+        <section id="contact">
+            <form action="#!" id="contact-form">
+                <div class="segment">
+                    <span>Contactez-moi</span>
+                </div>
+                <div class="form-wrapper">
+                    <div>
+                        <label>Prénom
+                            <input name="name" type="text" placeholder="John" />
+                        </label>
+                        <label>Nom
+                            <input name="lastname" type="text" placeholder="Doe" />
+                        </label>
+                        <label>
+                            Email
+                            <input name="email" type="email" placeholder="john@doe.fr" />
+                        </label>
+                        <label for="subject">Choisissez un sujet</label>
+                        <select name="subject" id="subject">
+                            <option value="Projet de conception web">Projet de conception web</option>
+                            <option value="Développement web">Développement web</option>
+                            <option value="Audit web">Audit web</option>
+                            <option value="Demande d'information">Demande d'information</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Votre message
+                            <textarea name="message" rows="20" cols="40" placeholder="Lorem ipsum.."></textarea></label>
+                    </div>
+                </div>
+                <button id="contact-submit" type="submit">Envoyez votre message</button>
+                <div id="feedback"></div>
+            </form>
+        </section>
+    </main>
+<sm-footer></sm-footer>
+
+    <!-- modal -->
+    <div data-ml-modal id="modal-corporate">
+        <a href="#!" role="dialog" alt="lien pour ouvrir une modale" class="modal-overlay"></a>
+        <div class="modal-dialog modal-dialog-lg">
+            <a href="#!" class="modal-close">&times;</a>
+            <h3>RGPD</h3>
+            <div class="modal-content newspaper">
+                <p>je vous rassure tout de suite vos données personnelles n’encourent aucun risque puisque ce site n’utilise aucune de vos données, ni cookies ni aucun outils analytics. La meilleur façon d’avoir un web libre c’est de respecter les internautes, ceci n’est pas un engagement mais un mode de vie.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script defer src="components.js"></script>
+</body>
+</html>

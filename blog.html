@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,700;1,500&amp;family=Quicksand:wght@700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Blog de samuel michelet chef de projet digital</title>
+</head>
+<body>
+    <nav id="top-nav">
+        <div class="logo">
+            <a href="index.html">
+            Samuel Michelet
+        </a>
+        </div>
+        <div class="right-nav">
+            <ul>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="guides">
+        <nav class="guides-nav"></nav>
+        <section id="grid">
+            <sm-guides></sm-guides>
+         
+            
+        </section>
+    </main>
+
+    <sm-footer></sm-footer>
+
+    <script>
+        // Guides
+class SmGuides extends HTMLElement {
+    constructor() {
+        super()
+
+        this._guides = [
+            {
+                id: 1,
+                date: "04/10/2020",
+                maj: "--",
+                title: "Pourquoi et comment créer son blog",
+                content: 'Vous vous demandez si avoir un blog pour votre  entreprise ou votre projet est pertinent?Vous ne savez pas comment utiliser un blog pour obtenir de bons résultats mesurables?Vous pouvez apprendre “sur le tas” ou assister à une conférence sur le blogging, mais cela prend du temps et de l\'argent... où alors vous pouvez lire cet article.',
+                img: 'url("img/blogarticle.jpg")',
+                cta: 'Apprendre pourquoi et comment créer son blog',
+                link: './creersonblog.html'
+            },
+            {
+                id: 2,
+                date: "fin novembre",
+                maj: "--",
+                title: "En construction",
+                content: '...',
+                img: 'url("ressources/images/guide_blog.jpg")',
+                cta: 'indisponible..',
+                link: './guides.html'
+
+            },
+            {
+                id: 3,
+                date: "decembre",
+                maj: "--",
+                title: "En construction",
+                content: '...',
+                img: 'url("ressources/images/guide_blog.jpg")',
+                cta: 'indisponible..',
+                link: './guides.html'
+            },
+            {
+                id: 4,
+                date: "janvier",
+                maj: "--",
+                title: "En construction",
+                content: '...',
+                img: 'url("ressources/images/guide_blog.jpg")',
+                cta: 'indisponible..',
+                link: './guides.html'
+
+            },
+            {
+                id: 5,
+                date: "fevrier",
+                maj: "--",
+                title: "En construction",
+                content: '...',
+                img: 'url("ressources/images/guide_blog.jpg")',
+                cta: 'indisponible..',
+                link: './guides.html'
+            },
+            {
+                id: 6,
+                date: "mars",
+                maj: "--",
+                title: "En construction",
+                content: '...',
+                img: 'url("ressources/images/guide_blog.jpg")',
+                cta: 'indisponible..',
+                link: './guides.html'
+
+            },
+        ]
+    }
+
+    connectedCallback() {
+        this.innerHTML = `
+        
+        <template id="guide-template">
+            <article class="guide"><a>
+                <div class="guide-img"></div>
+                <div class="guide-content">
+                    <span class="guide-date">date:</span>
+                    <span class="guide-maj">Mise à jour:</span>
+                    <h2  class="title"></h2>
+                    <div>
+                    <p></p>
+                    </div>
+                        <button class="guide-btn cta"></button>
+                    
+                </div></a>
+            </article>
+
+            
+        </template>
+        <div id="result"></div>
+        `
+
+        this._templateContent = document.querySelector('#guide-template').content;
+         this._result = document.querySelector('#result');
+
+        this._guides.map(guide => {
+            const clone = document.importNode(this._templateContent, true);
+            clone.querySelector('.title').textContent = guide.title;
+            clone.querySelector('.guide-date').textContent = 'date: ' +guide.date;
+            clone.querySelector('.guide-maj').textContent = 'mise à jour: ' + guide.maj;
+            clone.querySelector('.guide-content p').textContent = guide.content;
+            clone.querySelector('.guide-img').style.background = "url('`${guide.img}`;')"
+            clone.querySelector('.guide-btn').textContent = guide.cta;
+            clone.querySelector('.guide-img').style.background = guide.img;
+            clone.querySelector('.guide a').setAttribute('href', `${guide.link}`);
+
+
+            this._result.appendChild(clone);
+        })
+    }
+
+
+}
+
+window.customElements.define('sm-guides', SmGuides);
+    
+    </script>
+</body>
+</html>
