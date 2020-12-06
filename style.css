@@ -529,7 +529,7 @@ sm-guides{width: 100%;}
 /* ---------------guide------------------- */
 .guide-header{padding: 9rem var(--paddingX);background-color: var(--dark);color: var(--white);min-height: 50vh;width: 100%;display: flex;flex-flow: wrap; justify-content: space-around;}
 .guide-intro{width: 60%;max-width: 70rem; align-self: center; padding-right: 2rem;}
-.guide-intro h1{margin-bottom: var(--guttervb);}
+.guide-intro h1{margin-bottom: var(--guttervb); padding-top: 10rem;}
 #guide-intro--img{width: 36rem; height: 36rem; display: flex;}
 #guide-intro--img img{height: auto;width: 100%; background-size: cover;background-position: center;border-radius: 50%;margin: 0 auto;}
 
@@ -543,7 +543,7 @@ sm-guides{width: 100%;}
 #guide-main label{position:
   absolute;opacity: 0; z-index: 3333;}
 
-#menuToggle{display:none; opacity: 0; fill: --white;}
+#menuToggle{display:none; opacity: 0; fill: var(--white);}
 
 .ul-toc {
   /* position: fixed;
@@ -665,22 +665,25 @@ sm-guides{width: 100%;}
    z-index: 2;
    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
  }
+ /* #guide-main label{position: fixed;} */
  .menuToggle{
    display: block;
  -webkit-appearance: none;
-   position: fixed;
+   position: fixed!important;
    bottom: 10rem;
-   right: 1rem;
+   right: 1rem!important;
    height: 6rem;
    width: 6rem;
    cursor: pointer;
    background-color: transparent;
    border: none;
    outline: none;
-   z-index: 3;}
+   z-index: 3;
+  }
  .menuToggle:checked ~ .toc {
    display: block;
  }
+ .toc{border: 10px solid red;}
  .ul-toc {
    overflow-y: auto;
    position: fixed;
@@ -706,7 +709,7 @@ sm-guides{width: 100%;}
  .bottomNav ul li{margin-right: 7vw;}
  .bottomNav ul li img{margin-top: -.235ex; vertical-align: middle; margin-right: 1vw;}
  .bottomNav ul li a{color: var(--dark); font-size: var(--txtm); text-shadow: 0 0 25px rgba(50, 49, 47, .7);}
-
+ .guide-intro h1{ padding-top: 10rem;}
 
  .topNav{justify-content: center;}
  .logoTxt{font-size: var(--tnm);}
